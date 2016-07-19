@@ -1,0 +1,119 @@
+.navicon {
+  width: 100%;
+  background: #fafafa;
+   display: block;
+    float: right;
+    height: 30px;
+    margin:3px;
+    position: relative;
+    transition: all 0.5s linear 0s;
+    width: 40px;
+    z-index: 99;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+.navicon:before, .navicon:after {
+  background: #000;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  content: "";
+  height: 3px;
+  left: 4px;
+  top:0 ;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+  width: 30px;
+}
+
+.navicon:before {
+  box-shadow: #000 0 7px 0 0;
+  position: absolute;
+  top:6px;
+}
+
+.navicon:after {
+  position: absolute;
+  top: 20px;
+}
+
+.navicon--active {
+  margin-top: 1px;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+}
+
+.navicon--active:before {
+  box-shadow: transparent 0 0 0 0;
+  top: 12px;
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.navicon--active:after {
+  top: 12px;
+  -webkit-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.toggle {
+     background-color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin: 42px auto;
+    min-width: 200px;
+    opacity: 0;
+    padding: 10px;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-200%);
+    transition: all 0.5s ease-in 0s;
+    width: 100%;
+    z-index: 999;
+}
+
+.toggle--active {
+  display: block;
+  opacity: 1;
+  -webkit-transition: ease-in 0.5s all;
+  transition: ease-in 0.5s all;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.toggle-menu { margin-bottom:0px; }
+
+.toggle-menu li {
+  width: 25%;
+  display: block;
+  margin: 10px auto;
+}
+
+.toggle-menu li a {
+  text-decoration: none;
+  color: #000;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+  font-weight: 500;
+  padding: 5px 0;
+}
+
+.toggle-menu li a span { text-transform: lowercase; }
+
+.toggle-menu li a:hover {
+  color: #db5523;
+  border-bottom: 2px solid #db5523;
+  -webkit-transition: linear 0.5s all;
+  transition: linear 0.5s all;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  font-weight: 700;
+}

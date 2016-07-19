@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Menu</title>
+<link href="css/navigation.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/jPushMenu.css" />
+</head>
+<body>
+<section>
+  <div class="page-header">
+    <button class="toggle-menu menu-right push navicon"></button>
+    <!-- Right menu element-->
+    <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right">
+      <h3>Menu</h3>
+      <a href="#">HOME</a> <a href="#">ABOUT US</a> <a href="#">SERVICE</a> <a href="#">PRODUCTS</a> <a href="#">CONTACT US</a> </nav>
+  </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="js/jPushMenu.js"></script> 
+<script>
+jQuery(document).ready(function($) {
+	$('.toggle-menu').jPushMenu();
+});
+$('.navicon').on('click', function (e) {
+  e.preventDefault();
+  $(this).toggleClass('navicon--active');
+  $('.toggle').toggleClass('toggle--active');
+});
+
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</body>
+</html>
